@@ -29,6 +29,7 @@ function calcular() {
     let luzPorPersona = 0;
     if (totalPersonas > 0) {
         luzPorPersona = totalLuz / totalPersonas;
+        totalPersonas = luzPorPersona
     }
 
     // 3. CÁLCULOS POR PISO
