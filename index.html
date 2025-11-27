@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>⚡ Calculadora de Recibo</h2>
+
+    <div class="input-group">
+        <label>Total Recibo (A pagar):</label>
+        <input type="number" id="totalRecibo" value="306080" class="highlight-blue">
+    </div>
+
+    <div class="input-group">
+        <label>Total Aseo (Costo fijo):</label>
+        <input type="number" id="totalAseo" value="97970" class="highlight-yellow">
+    </div>
+
+    <div class="people-config">
+        <label class="center-label">👥 Personas por Piso (Para Luz)</label>
+        <div class="floor-inputs">
+            <div class="floor-input-box">
+                <label>Piso 1</label>
+                <input type="number" id="p1_personas" value="0">
+            </div>
+            <div class="floor-input-box">
+                <label>Piso 2</label>
+                <input type="number" id="p2_personas" value="2">
+            </div>
+            <div class="floor-input-box">
+                <label>Piso 3</label>
+                <input type="number" id="p3_personas" value="3">
+            </div>
+        </div>
+    </div>
+
+    <button onclick="calcular()">CALCULAR AHORA</button>
+
+    <div class="results" id="resultados">
+        <div class="summary-box">
+            <p><strong>Costo Luz Total:</strong> <span id="resLuzTotal">$0</span></p>
+            <p><strong>Costo por Persona (Luz):</strong> <span id="resLuzPersona">$0</span></p>
+            <p><strong>Costo Aseo por Piso:</strong> <span id="resAseoPiso">$0</span></p>
+        </div>
+
+        <div class="floor-title">PISO 1</div>
+        <div class="result-row">
+            <span>Aseo:</span> <span id="p1_aseo">$0</span>
+        </div>
+        <div class="result-row">
+            <span>Luz (0 pers):</span> <span id="p1_luz">$0</span>
+        </div>
+        <div class="result-row total-row">
+            <span>TOTAL PISO 1:</span> <span id="p1_total">$0</span>
+        </div>
+
+        <div class="floor-title">PISO 2</div>
+        <div class="result-row">
+            <span>Aseo:</span> <span id="p2_aseo">$0</span>
+        </div>
+        <div class="result-row">
+            <span>Luz (2 pers):</span> <span id="p2_luz">$0</span>
+        </div>
+        <div class="result-row total-row">
+            <span>TOTAL PISO 2:</span> <span id="p2_total">$0</span>
+        </div>
+
+        <div class="floor-title">PISO 3</div>
+        <div class="result-row">
+            <span>Aseo:</span> <span id="p3_aseo">$0</span>
+        </div>
+        <div class="result-row">
+            <span>Luz (3 pers):</span> <span id="p3_luz">$0</span>
+        </div>
+        <div class="result-row total-row">
+            <span>TOTAL PISO 3:</span> <span id="p3_total">$0</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
